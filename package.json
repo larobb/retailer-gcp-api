@@ -6,7 +6,7 @@
   "author": "Robert Zaykovski @ Capgemini",
   "repository": {
     "type": "git",
-    "url": "https://github.com/GoogleCloudPlatform/nodejs-docs-samples.git"
+    "url": "https://github.com/larobb/retailer-gcp-api.git"
   },
   "engines": {
     "node": ">=8.0.0"
@@ -27,7 +27,7 @@
   "cloud-repo-tools": {
     "test": {
       "app": {
-        "msg": "Last 10 visits:"
+        "msg": "Customer Management"
       }
     },
     "requiresKeyFile": true,
