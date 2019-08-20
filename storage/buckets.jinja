@@ -1,0 +1,32 @@
+{% set MA_DATA_ARCHIVE = 'some-demo-bucket1-' + properties['env_suffix'] %}
+{% set MA_DATA_TRANSFORMATION = 'some-demo-bucket2-' + properties['env_suffix']%}
+{% set MA_DATA_TRANSFER_FTP = 'some-demo-bucket3-' + properties['env_suffix'] %}
+
+resources:
+- type: gcp-types/storage-v1:buckets
+  name: {{ MA_DATA_ARCHIVE }}
+  properties:
+    predefinedAcl: projectPrivate
+    projection: full
+    location: europe-west2
+    storageClass: STANDARD
+
+- type: gcp-types/storage-v1:buckets
+  name: {{ MA_DATA_TRANSFER_FTP }}
+  properties:
+    predefinedAcl: projectPrivate
+    projection: full
+    location: europe-west2
+    storageClass: STANDARD
+
+- type: gcp-types/storage-v1:buckets
+  name: {{ MA_DATA_TRANSFORMATION }}
+  properties:
+    predefinedAcl: projectPrivate
+    projection: full
+    location: europe-west2
+    storageClass: STANDARD
+
+outputs:
+  - name: {{ MA_DATA_ARCHIVE }}
+    value: $(ref.{{ MA_DATA_ARCHIVE }}.name)

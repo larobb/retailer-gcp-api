@@ -1,0 +1,10 @@
+imports:
+  - path: buckets.jinja
+
+resources:
+  - name: ma-buckets
+    type: buckets.jinja
+    properties:
+      region: europe-west2
+      storageClass: REGIONAL
+      env_suffix: '0234702745'
