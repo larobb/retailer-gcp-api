@@ -1,0 +1,1 @@
+ gcloud deployment-manager deployments update master-buckets --config config.yaml
