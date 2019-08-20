@@ -15,6 +15,7 @@ const getAll = () => {
   return datastore.runQuery(query);
 };
 
+
 const getById = customerId => {
   const query = datastore.createQuery('customer').filter('id', customerId);
   return datastore.runQuery(query);
