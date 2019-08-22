@@ -1,3 +1,0 @@
-steps:
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['deployment-manager','deployments','update','master-buckets','--config','storage/config.yaml','--delete-policy','abandon']
